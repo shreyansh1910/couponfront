@@ -1,38 +1,154 @@
-.App {
+ .heading{
+    font-size: 40px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-top: 0px;
+    text-align: center;
+  }
+ 
+  html {
+    height: 100%;
+
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  }
+  input[type=text] {
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  }
+
+.button33 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
   text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
 }
 
-.App-link {
-  color: #61dafb;
+.button-24:active {
+  opacity: .5;
 }
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #f0fff3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.coupon-card{
+    background: linear-gradient(135deg, #7158fe, #9d4de6);
+    color: #fff;
+    text-align: center;
+    padding: 40px 80px;
+    border-radius: 15px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.15);
+    position: relative;
+
+}
+.logo{
+    width: 80px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+}
+.coupon-card h3{
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 40px;
+
+}
+.coupon-card p{
+    font-size: 15px;
+
+}
+.coupon-row{
+    display: flex;
+    align-items: center;
+    margin: 25px auto;
+    width: fit-content;
+
+}
+.cpnCode{
+    border: 5px dashed #f508a2;
+    padding: 10px 20px;
+    cursor: pointer;
+    
+
+}
+#cpnBtn{
+    border: 1px solid #fff;
+    background: #fff;
+    padding: 10px 20px;
+    color: #7158fe;
+    cursor: pointer;
+}
+.circle1, .circle2{
+    background: #f0fff3;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+.circle1{
+    left: -25px;
+}
+.circle2{
+    right: -25px;
 }
