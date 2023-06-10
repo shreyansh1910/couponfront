@@ -9,6 +9,7 @@ function App() {
   const [login, setLogin] = useState(false);
   const [msg, setMsg] = useState('');
   const [msgA, setMsgA] = useState('');
+  const [loginPage,setLoginPage]=useState(true);
 
   const handleUser = (event) => {
     setUser(event.target.value);
@@ -38,11 +39,13 @@ function App() {
         if (msg == 1) {
           setLogin(true);
           setCode(code);
+          setLoginPage(false);
 
         }
         else {
           setLogin(false);
           setCode(-1);
+          setLoginPage(true);
         }
 
 
@@ -71,6 +74,7 @@ function App() {
         if (responseJson.msg == -1) {
           setCode(-1);
           setLogin(false);
+          setLoginPage(true);
         }
 
 
@@ -96,7 +100,7 @@ function App() {
   return (
     <div >
     <p className='heading' >Coupon Code Generator</p>
-    {msg!=1 && 
+    { loginPage && 
       <div style={{flexDirection:'column',display:'flex',alignItems:'center',alignContent:'center',justifyContent:'space-around'}}>
       <div style={{margin:'5px'}}>
          <input type='text' style={{width:'300px'}} value={user} onChange={handleUser} placeholder='Type your user name' />
