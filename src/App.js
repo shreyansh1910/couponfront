@@ -95,7 +95,8 @@ function App() {
 
   return (
     <div >
-    <p className='heading' >Coupon Code</p>
+    <p className='heading' >Coupon Code Generator</p>
+    {msg!=1 && 
       <div style={{flexDirection:'column',display:'flex',alignItems:'center',alignContent:'center',justifyContent:'space-around'}}>
       <div style={{margin:'5px'}}>
          <input type='text' style={{width:'300px'}} value={user} onChange={handleUser} placeholder='Type your user name' />
@@ -106,15 +107,16 @@ function App() {
   
       <button className='button33' onClick={handleGenerate}>Generate</button>
       {(msg == -1 && code == -1) && <div>Check your password or username</div>}
-      {(msgA == -1) && <div>Generate again</div>}
-      </div>
+      
+      </div>}
       
       
       <div style={{display:'flex',alignItems:'center',alignContent:'center',flexDirection:'column',justifyContent:'space-evenly',height:'300px'}}>
       {(login && msg) && <div style={{width:'100px',textAlign:'center'}}  className='cpnCode'><span onClick={handleCopyText}>{code}</span></div>}
       
       {(code != -1 && msg != -1 && msg!='') && <div ><button className='button-24' onClick={handleApply}>Apply Code</button></div>}
-      
+     
+      {(msgA == -1) && <div>Generate again</div>}
       {(msgA == 1) && <div>Applied successfully</div>}
       </div>
 
